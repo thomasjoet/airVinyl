@@ -1,5 +1,6 @@
 class Vinyl < ActiveRecord::Base
   belongs_to :user
+  has_many :bookings
   validates :title, presence: true
   validates :artist, presence: true
   validates :price, presence: true
