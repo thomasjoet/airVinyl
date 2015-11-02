@@ -4,8 +4,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :destroy]
   end
 
-  resources :users, except: [:index]
-
   resources :dashboards, only: [:show]
 
   root 'vinyls#index'
