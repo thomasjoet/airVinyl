@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  resources :vinyls do
+    resources :bookings, only: [:new, :create, :destroy]
+  end
+
+  resources :users, except: [:index]
+
+  resources :dashboards, only: [:show]
+
+  root 'vinyls#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
