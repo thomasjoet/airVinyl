@@ -1,8 +1,11 @@
-<h1>List of vinyls</h1>
+<h1 class="text-center">List of vinyls</h1>
 
-<% @vinyls.each do |vinyl| %>
-  <h2><%= vinyl.title %></h2>
-  <p><%= vinyl.artist %></p>
-  <p><%= vinyl.genre %></p>
-  <p><%= vinyl.city %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @vinyls.each do |vinyl| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= render "card", vinyl: vinyl %>
+      </div>
+    <% end %>
+  </div>
+</div>
