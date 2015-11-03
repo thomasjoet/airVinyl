@@ -16,7 +16,9 @@ class VinylsController < ApplicationController
   end
 
   def create
+    # @vinyl = current_user.vinyls.build(vinyl_params)
     @vinyl = Vinyl.new(vinyl_params)
+    @vinyl.user = current_user
     if @vinyl.save
       redirect_to vinyl_path(@vinyl)
     else
@@ -45,4 +47,8 @@ class VinylsController < ApplicationController
   def vinyl_params
     params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture, tracks_attributes: [:title, :duration])
   end
+  # def set_user
+  #   @user = User.find(params[:user_id])
+  #   @user = current_user
+  # end
 end
