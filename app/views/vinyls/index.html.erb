@@ -1,0 +1,11 @@
+<h1 class="text-center">List of vinyls</h1>
+
+<div class="container">
+  <div class="row">
+    <% @vinyls.each do |vinyl| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= render "card", vinyl: vinyl %>
+      </div>
+    <% end %>
+  </div>
+</div>

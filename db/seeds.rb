@@ -5,7 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
 Vinyl.destroy_all
 vinyls_attributes = [
   {
@@ -113,3 +112,4 @@ vinyls_attributes = [
 ]
 
 vinyls.each { |vinyl| Vinyl.create(vinyl) }
+
