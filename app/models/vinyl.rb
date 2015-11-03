@@ -13,4 +13,6 @@ class Vinyl < ActiveRecord::Base
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
 
+  accepts_nested_attributes_for :tracks
+
 end

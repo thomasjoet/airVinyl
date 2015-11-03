@@ -7,6 +7,10 @@
     <%= f.input :genre %>
     <%= image_tag @vinyl.picture.url(:thumb) %>
     <%= f.input :picture %>
+    <%= f.simple_fields_for :tracks do |p| %>
+      <%= p.input :title %>
+      <%= p.input :duration %>
+    <% end %>
   </div>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary"  %>

@@ -12,6 +12,7 @@ class VinylsController < ApplicationController
 
   def new
     @vinyl = Vinyl.new
+    @vinyl.tracks.build
   end
 
   def create
@@ -42,6 +43,6 @@ class VinylsController < ApplicationController
   end
 
   def vinyl_params
-    params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture)
+    params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture, tracks_attributes: [:title, :duration])
   end
 end
