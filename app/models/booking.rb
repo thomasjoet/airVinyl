@@ -3,6 +3,6 @@ class Booking < ActiveRecord::Base
   belongs_to :user
   validates :startdate, presence: true
   validates :enddate, presence: true
-  validates_presence_of :user
-  validates_presence_of :vinyl
+  validates :user, presence: true
+  validates :vinyl, presence: true
 end
