@@ -2,39 +2,41 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="row">
-          <div class="col-xs-3">
-            <%= image_tag @vinyl.picture %>
-          </div>
-          <div class="col-xs-9">
-            <h3><%= @vinyl.artist %>-<%= @vinyl.title %></h3>
-            <p><%= @vinyl.genre %></p>
-          </div>
+    <div class="col-xs-12 col-md-8">
+      <div class="row">
+        <div class="col-xs-3">
+          <%= image_tag @vinyl.picture %>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Tracks</h2>
-            <table></table>
+        <div class="col-xs-9">
+          <h3><%= @vinyl.artist %>-<%= @vinyl.title %></h3>
+          <p><%= @vinyl.genre %></p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Tracks</h2>
+          <% @tracks.each do |track| %>
+            <%= render 'tracks', tracks: track %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-4 text-inline">
+      <div>
+        <h4>@vinyl.user</h4>
+        <p><em>@vinyl.user.picture</em></p>
+      </div>
+      <div>
+        <div class="panel">
+          <div class="text-center">
+            <p>X€ / j</p>
+          </div>
+          <div>
+            <%= link_to 'Request a vinyl', vinyl_bookings_path(@vinyl), class: "btn btn-success" %>
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4 text-inline">
-        <div>
-          <h4>@vinyl.user</h4>
-          <p><em>@vinyl.user.picture</em></p>
-        </div>
-        <div>
-          <div class="panel">
-            <div class="text-center">
-              <p>X€ / j</p>
-            </div>
-            <div>
-              <%= link_to 'Request a vinyl', vinyl_bookings_path(@vinyl), class: "btn btn-success" %>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
   </div>
 </div>
