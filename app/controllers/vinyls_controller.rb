@@ -7,6 +7,7 @@ class VinylsController < ApplicationController
   end
 
   def show
+    @tracks = []
   end
 
   private
