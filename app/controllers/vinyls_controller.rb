@@ -1,6 +1,6 @@
 class VinylsController < ApplicationController
 
-  before_action :find_vinyl, only: [:show]
+  before_action :find_vinyl, only: [:show, :edit, :update]
 
   def index
     @vinyls = Vinyl.all
@@ -20,6 +20,18 @@ class VinylsController < ApplicationController
       redirect_to vinyl_path(@vinyl)
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    @vinyl.update(vinyl_params)
+    if @vinyl.save
+      redirect_to root_path
+    else
+      render :edit
     end
   end
 
