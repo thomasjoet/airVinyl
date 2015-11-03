@@ -7,7 +7,7 @@
     <p><%= vinyl.price %> €</p>
   </span>
   <span class="card-user">
-    <img src="http://placehold.it/50x50" class="avatar avatar-bordered"/>
+    <img src="<%= vinyl.user.picture.url(:medium) %>" class="avatar avatar-bordered"/>
   </span>
   <%= link_to "", vinyl_path(vinyl), class: "card-link" %>
 </div>
