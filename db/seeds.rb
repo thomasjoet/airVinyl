@@ -1,16 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-<<<<<<< HEAD
-#   cities = City.create([{ title: 'Chicago' }, { title: 'Copenhagen' }])
-#   Mayor.create(title: 'Emanuel', city: cities.first)
-
-=======
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
->>>>>>> master
 Vinyl.destroy_all
 vinyls_attributes = [
   {
@@ -123,9 +110,5 @@ vinyls_attributes = [
   },
 ]
 
-<<<<<<< HEAD
 vinyls_attributes.each { |vinyl| Vinyl.create(vinyl) }
-=======
-vinyls.each { |vinyl| Vinyl.create(vinyl) }
 
->>>>>>> master
