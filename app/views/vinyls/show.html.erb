@@ -1,0 +1,27 @@
+<h1 class="text-center"><%= @vinyl.title %>-<%= @vinyl.artist %> </h1>
+
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="row">
+          <div class="col-xs-3">
+            <%= image_tag @vinyl.picture %>
+          </div>
+          <div class="col-xs-9">
+            <h3><%= @vinyl.artist %>-<%= @vinyl.title %></h3>
+            <p><%= @vinyl.genre %></p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Tracks</h2>
+            <table></table>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <h4><%= @user.name %></h4>
+      </div>
+  </div>
+</div>
