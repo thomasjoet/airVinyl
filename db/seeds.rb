@@ -8,11 +8,108 @@
 Vinyl.destroy_all
 vinyls_attributes = [
   {
-    title:        "",
+    name:         "",
     artist:       "",
-    price:        ,
-    genre:        ""
+    picture:      "",
+    price:
   },
-
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
 ]
-vinyls_attributes.each { |params| Vinyl.create!(params) }
+
+vinyls.each { |vinyl| Vinyl.create(vinyl) }
+
