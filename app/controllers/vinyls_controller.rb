@@ -18,7 +18,6 @@ class VinylsController < ApplicationController
     # @vinyl = current_user.vinyls.build(vinyl_params)
     @vinyl = Vinyl.new(vinyl_params)
     @vinyl.user = current_user
-    # @vinyl = @vinyl.current_user.build(vinyl_params)
     if @vinyl.save
       redirect_to vinyl_path(@vinyl)
     else
