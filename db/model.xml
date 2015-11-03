@@ -73,7 +73,7 @@
 <row name="City" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
-<row name="Cover" null="1" autoincrement="0">
+<row name="picture" null="1" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>NULL</default></row>
 <row name="owner_id" null="1" autoincrement="0">

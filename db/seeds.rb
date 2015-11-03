@@ -5,3 +5,111 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Vinyl.destroy_all
+vinyls_attributes = [
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+  {
+    name:         "",
+    artist:       "",
+    picture:      "",
+    price:
+  },
+]
+
+vinyls.each { |vinyl| Vinyl.create(vinyl) }
