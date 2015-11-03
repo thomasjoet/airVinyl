@@ -20,8 +20,21 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-12 col-md-4">
-        <h4><%= @user.name %></h4>
+      <div class="col-xs-12 col-md-4 text-inline">
+        <div>
+          <h4>@vinyl.user</h4>
+          <p><em>@vinyl.user.picture</em></p>
+        </div>
+        <div>
+          <div class="panel">
+            <div class="text-center">
+              <p>X€ / j</p>
+            </div>
+            <div>
+              <%= link_to 'Request a vinyl', vinyl_bookings_path(@vinyl), class: "btn btn-success" %>
+            </div>
+          </div>
+        </div>
       </div>
   </div>
 </div>
