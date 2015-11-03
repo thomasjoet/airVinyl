@@ -14,5 +14,4 @@ class VinylsController < ApplicationController
   def find_vinyl
     @vinyl = Vinyl.find(params[:id])
   end
-
 end
