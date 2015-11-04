@@ -1,11 +1,26 @@
-<h1 class="text-center">List of vinyls</h1>
+<h1 class="text-center">Welcome</h1>
+<p class="text-center">find all the vinyls you're looking for</p>
+</br>
+ <%= render "searchbar" %>
+ </br>
 
 <div class="container">
   <div class="row">
-    <% @vinyls.each do |vinyl| %>
-      <div class="col-xs-12 col-sm-3">
-        <%= render "card", vinyl: vinyl %>
+
+    <div class="col-xs-12 col-sm-8">
+      <div class="row">
+        <% @vinyls.each do |vinyl| %>
+          <div class="col-xs-12 col-sm-4">
+            <%= render "card", vinyl: vinyl %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      </br>
+      <p class= "text-center">map here!</p>
+    </div>
+
   </div>
 </div>

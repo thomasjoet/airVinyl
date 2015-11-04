@@ -4,6 +4,20 @@ class VinylsController < ApplicationController
 
   def index
     @vinyls = Vinyl.all
+    unless params[:artist].blank?
+      @vinyls = @vinyls.where(artist: params[:artist])
+    end
+    unless params[:title].blank?
+      @vinyls = @vinyls.where(title: params[:title])
+    end
+    unless params[:city].blank?
+      @vinyls = @vinyls.where(city: params[:city])
+    end
+
+
+    # else
+    #   "No result found"
+    # end
   end
 
   def show
