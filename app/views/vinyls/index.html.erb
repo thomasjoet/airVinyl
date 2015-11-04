@@ -4,10 +4,20 @@
 
 <div class="container">
   <div class="row">
-    <% @vinyls.each do |vinyl| %>
-      <div class="col-xs-12 col-sm-3">
-        <%= render "card", vinyl: vinyl %>
+
+    <div class="col-xs-12 col-sm-8">
+      <div class="row">
+        <% @vinyls.each do |vinyl| %>
+          <div class="col-xs-12 col-sm-4">
+            <%= render "card", vinyl: vinyl %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+        <p>map here!</p>
+    </div>
+
   </div>
 </div>
