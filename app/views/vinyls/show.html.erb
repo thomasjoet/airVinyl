@@ -39,10 +39,10 @@
       <div>
         <div class="panel">
           <div class="text-center">
-            <p>X€ / j</p>
+            <p><%= @vinyl.price %>€ / j</p>
           </div>
           <div>
-            <%= link_to 'Request a vinyl', vinyl_bookings_path(@vinyl), class: "btn btn-success" %>
+            <%= render 'shared/form' %>
           </div>
         </div>
       </div>
