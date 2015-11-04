@@ -32,7 +32,7 @@ class VinylsController < ApplicationController
   def update
     @vinyl.update(vinyl_params)
     if @vinyl.save
-      redirect_to root_path
+      redirect_to vinyl_path(@vinyl)
     else
       render :edit
     end

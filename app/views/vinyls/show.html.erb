@@ -15,9 +15,19 @@
       <div class="row">
         <div class="col-xs-12">
           <h2>Tracks</h2>
-          <% @tracks.each do |track| %>
-            <%= render 'tracks', tracks: track %>
+          <table class="table">
+            <thead>
+              <tr>
+                <td><strong>Title</strong></td>
+                <td><strong>Duration</strong></td>
+              </tr>
+            </thead>
+            <tbody>
+          <% @vinyl.tracks.each do |track| %>
+            <%= render 'tracks', track: track %>
           <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
