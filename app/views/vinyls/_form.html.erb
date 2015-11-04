@@ -7,10 +7,13 @@
     <%= f.input :genre %>
     <%= image_tag @vinyl.picture.url(:thumb) %>
     <%= f.input :picture %>
-    <%= f.simple_fields_for :tracks do |p| %>
-      <%= p.input :title %>
-      <%= p.input :duration %>
+    <p>Add tracks</p>
+    <%= f.simple_fields_for :tracks do |track| %>
+      <%= render 'track_fields', :f => track %>
     <% end %>
+    <div class="links">
+      <%= link_to_add_association 'Add track', f, :tracks, class: "btn btn-default" %>
+    </div>
   </div>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary"  %>
