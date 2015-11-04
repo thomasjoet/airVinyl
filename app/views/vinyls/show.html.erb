@@ -32,10 +32,9 @@
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
-      <div>
-        <h4><%= link_to current_user.name, user_path(current_user) %></h4>
-        <%= image_tag current_user.picture, class: "avatar-large" %>
-      </div>
+      <span>
+        <img src="<%= @vinyl.user.picture.url(:medium) %>" class="avatar-large"/>
+      </span>
       <div>
         <div class="panel">
           <div class="text-center">
