@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104141456) do
+ActiveRecord::Schema.define(version: 20151104145159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20151104141456) do
     t.datetime "picture_updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "adress"
+    t.string   "address"
   end
 
   add_index "vinyls", ["user_id"], name: "index_vinyls_on_user_id", using: :btree
