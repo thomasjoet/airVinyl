@@ -1,3 +1,4 @@
+Booking.destroy_all
 Vinyl.destroy_all
 vinyls_attributes = [
   {
