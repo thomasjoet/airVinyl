@@ -22,6 +22,7 @@ class VinylsController < ApplicationController
 
   def show
     @tracks = []
+    @booking = Booking.new
   end
 
   def new

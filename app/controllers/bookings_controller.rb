@@ -7,8 +7,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    start_date = params[:booking][:start_date].to_date
-    end_date = params[:booking][:end_date].to_date
+    start_date = params[:booking][:startdate].to_date
+    end_date = params[:booking][:enddate].to_date
     @booking = Booking.new(booking_params)
 
     @booking.vinyl = @vinyl
@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
 
     if @booking.save
       redirect_to vinyl_path(@vinyl)
-      flash[:alert] = "Your vinyl has been successfully booked"
+      flash.notice = "Your vinyl has been successfully booked"
     else
       render :new
     end
@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :vinyl_id, :user_id)
+    params.require(:booking).permit(:startdate, :enddate, :vinyl_id, :user_id)
   end
 
   def find_vinyl
