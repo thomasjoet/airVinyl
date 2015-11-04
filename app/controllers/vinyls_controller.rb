@@ -3,6 +3,8 @@ class VinylsController < ApplicationController
   before_action :find_vinyl, only: [:show, :edit, :update]
 
   def index
+    @search_term = params[:search_term]
+    @vinyl = Vinyl.find(params[:id])
     @vinyls = Vinyl.all
   end
 
