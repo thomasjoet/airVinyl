@@ -10,8 +10,6 @@ class VinylsController < ApplicationController
     unless params[:title].blank?
       @vinyls = @vinyls.where(title: params[:title])
     end
-    unless params[:city].blank?
-      @vinyls = @vinyls.where(city: params[:city])
     end
     @markers = Gmaps4rails.build_markers(@vinyls) do |vinyl, marker|
       marker.lat vinyl.latitude
