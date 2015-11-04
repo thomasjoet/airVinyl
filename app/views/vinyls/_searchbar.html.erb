@@ -1,10 +1,10 @@
-
-<%= simple_form_for(@vinyl) do |f| %>
-  <%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :search_term %>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3 navbar-wagon-search">
+    <%= form_tag vinyls_path, method: :get do %>
+      <%= text_field_tag :artist, nil, placeholder: 'artist' %>
+      <%= text_field_tag :title, nil, placeholder: 'title' %>
+      <%= text_field_tag :city, nil, placeholder: 'city' %>
+      <%= submit_tag "Find a vinyl", class:"btn btn-primary" %>
+    <% end %>
   </div>
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary"  %>
-  </div>
-<% end %>
+</div>
