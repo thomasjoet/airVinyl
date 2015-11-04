@@ -14,7 +14,7 @@ class VinylsController < ApplicationController
       @vinyls = @vinyls.where(city: params[:city])
     end
 
-
+    @vinyl_coordinates = { lat: @vinyl.lat, lng: @vinyl.lng }
     # else
     #   "No result found"
     # end
@@ -22,6 +22,7 @@ class VinylsController < ApplicationController
 
   def show
     @tracks = []
+    @vinyl_coordinates = { lat: @vinyl.lat, lng: @vinyl.lng }
   end
 
   def new
