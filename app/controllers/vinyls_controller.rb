@@ -3,11 +3,21 @@ class VinylsController < ApplicationController
   before_action :find_vinyl, only: [:show, :edit, :update]
 
   def index
-    if params[:artist] || params[:title] || params[:city]
-      @vinyls = Vinyl.where(artist: params[:artist], title: params[:title], city: params[:city])
-    else
-      @vinyls = Vinyl.all
+    @vinyls = Vinyl.all
+    unless params[:artist].blank?
+      @vinyls = @vinyls.where(artist: params[:artist])
     end
+    unless params[:title].blank?
+      @vinyls = @vinyls.where(title: params[:title])
+    end
+    unless params[:city].blank?
+      @vinyls = @vinyls.where(city: params[:city])
+    end
+
+
+    # else
+    #   "No result found"
+    # end
   end
 
   def show
