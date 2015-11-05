@@ -4,6 +4,7 @@
 //= require bootstrap-datepicker
 //= require underscore
 //= require gmaps/google
+//= require geocomplete
 //= require_tree .
 //= require cocoon
 

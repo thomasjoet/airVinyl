@@ -22,6 +22,7 @@ gem 'paperclip'
 gem "geocoder"
 gem "coffee-rails"
 gem "gmaps4rails"
+gem 'geocomplete_rails'
 gem 'bootstrap-datepicker-rails'
 
 source 'https://rails-assets.org' do

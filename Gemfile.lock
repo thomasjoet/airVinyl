@@ -92,6 +92,8 @@ GEM
     font-awesome-sass (4.4.0)
       sass (>= 3.2)
     geocoder (1.2.12)
+    geocomplete_rails (1.6.5)
+      railties (>= 3.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
@@ -235,6 +237,7 @@ DEPENDENCIES
   figaro
   font-awesome-sass
   geocoder
+  geocomplete_rails
   gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
