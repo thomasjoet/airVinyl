@@ -6,6 +6,7 @@ class Vinyl < ActiveRecord::Base
   validates :title, presence: true
   validates :artist, presence: true
   validates :price, presence: true
+  validates :address, presence: true
 
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }

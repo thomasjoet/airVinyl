@@ -7,7 +7,7 @@ class VinylsController < ApplicationController
 
     unless params[:search].blank?
       search = params[:search]
-      @vinyls = @vinyls.where(title: search.downcase)
+      @vinyls = @vinyls.where('LOWER(title) LIKE ? OR LOWER(artist) LIKE ?', "%#{search.downcase}%", "%#{search.downcase}%")
     end
     unless params[:address].blank?
       @vinyls = @vinyls.near(params[:address], 10)
@@ -61,7 +61,7 @@ class VinylsController < ApplicationController
   end
 
   def vinyl_params
-    params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture, tracks_attributes: [:title, :duration])
+    params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture, :address, tracks_attributes: [:title, :duration])
   end
   # def set_user
   #   @user = User.find(params[:user_id])
