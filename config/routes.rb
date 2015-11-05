@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :vinyls do
-    resources :bookings, only: [:new, :create, :destroy]
+    resources :bookings, only: [:new, :create, :show]
   end
 
   resources :dashboards, only: [:show]
