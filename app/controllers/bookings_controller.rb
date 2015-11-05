@@ -21,7 +21,8 @@ class BookingsController < ApplicationController
       redirect_to vinyl_booking_path(@vinyl, @booking)
       flash.notice = "Your vinyl has been successfully booked"
     else
-      render :new
+      redirect_to vinyl_path(@vinyl)
+      flash[:alert] = "Something went wrong with your booking, please check if you are logged in"
     end
   end
 
