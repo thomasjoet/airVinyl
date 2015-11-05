@@ -1,11 +1,10 @@
 class Vinyl < ActiveRecord::Base
   belongs_to :user
+
   has_many :bookings
   has_many :tracks, dependent: :destroy
 
-  validates :title, presence: true
-  validates :artist, presence: true
-  validates :price, presence: true
+  validates_presence_of :title, :artist, :price
 
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
