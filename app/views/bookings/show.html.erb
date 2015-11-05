@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-12 text-center">
+      <h1>My booking for </br> <%= @booking.vinyl.title %></h1>
+      <div>
+        <%= image_tag @booking.vinyl.picture.url(:medium), class: "image-medium" %>
+      </div>
+      <p><strong>Period: </strong><%= (@booking.enddate.to_date - @booking.startdate.to_date).to_i %> days, from <%= @booking.startdate.to_date %> to <%= @booking.enddate.to_date %>.</p>
+      <p><strong>Total price: </strong><%= (@booking.enddate.to_date - @booking.startdate.to_date).to_i * @booking.vinyl.price %></p>
+    </div>
+  </div>
+</div>
