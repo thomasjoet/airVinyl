@@ -4,17 +4,19 @@ class VinylsController < ApplicationController
 
   def index
     @vinyls = Vinyl.all
-    unless params[:artist].blank?
-      @vinyls = @vinyls.where(artist: params[:artist])
+
+    unless params[:search].blank?
+      search = params[:search]
+      @vinyls = @vinyls.where(title: search.downcase)
     end
-    unless params[:title].blank?
-      @vinyls = @vinyls.where(title: params[:title])
+    unless params[:address].blank?
+      @vinyls = @vinyls.near(params[:address], 10)
     end
     @markers = Gmaps4rails.build_markers(@vinyls) do |vinyl, marker|
       marker.lat vinyl.latitude
       marker.lng vinyl.longitude
     end
-    # else
+    # if @vinyls.nil?
     #   "No result found"
     # end
   end
