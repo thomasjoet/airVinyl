@@ -38,10 +38,13 @@
       <div>
         <div class="panel">
           <div class="text-center">
-            <p><%= @vinyl.price %>€ / j</p>
+            <p><strong>Price: <%= @vinyl.price %>€ / day</strong></p>
           </div>
           <div>
             <%= render 'shared/form' %>
+          </div>
+          <div>
+            <%= @booking.price %>
           </div>
         </div>
       </div>
