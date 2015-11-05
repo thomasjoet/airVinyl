@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
 
   root 'vinyls#index'
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :vinyls do
     resources :bookings, only: [:new, :create, :show]
   end
+
 
   resources :users, only: [ :show, :edit, :update ] do
     resources :vinyls, only: [ :index ]
   end
   # resources :dashboards, only: [:show]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
