@@ -1,20 +1,23 @@
 class VinylsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show,:index]
 
   before_action :find_vinyl, only: [:show, :edit, :update]
 
   def index
     @vinyls = Vinyl.all
-    unless params[:artist].blank?
-      @vinyls = @vinyls.where(artist: params[:artist])
+
+    unless params[:search].blank?
+      search = params[:search]
+      @vinyls = @vinyls.where('LOWER(title) LIKE ? OR LOWER(artist) LIKE ?', "%#{search.downcase}%", "%#{search.downcase}%")
     end
-    unless params[:title].blank?
-      @vinyls = @vinyls.where(title: params[:title])
+    unless params[:address].blank?
+      @vinyls = @vinyls.near(params[:address], 10)
     end
     @markers = Gmaps4rails.build_markers(@vinyls) do |vinyl, marker|
       marker.lat vinyl.latitude
       marker.lng vinyl.longitude
     end
-    # else
+    # if @vinyls.nil?
     #   "No result found"
     # end
   end
@@ -59,7 +62,7 @@ class VinylsController < ApplicationController
   end
 
   def vinyl_params
-    params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture, tracks_attributes: [:title, :duration])
+    params.require(:vinyl).permit(:title, :artist, :price, :genre, :picture, :address, tracks_attributes: [:title, :duration])
   end
   # def set_user
   #   @user = User.find(params[:user_id])
