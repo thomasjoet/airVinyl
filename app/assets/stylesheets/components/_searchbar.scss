@@ -1,8 +1,9 @@
 #searchbar {
-  background: #42454e;
-  border-radius: 1px;
+  background: $gray-dark;
+  border-radius: 3px;
   display: inline-block;
-  padding: 7px;
+  padding: 8px;
+  width: 100%;
 }
 
 .field {
@@ -21,7 +22,7 @@
   font-size: 12px;
   background: #ffffff;
   color: #42454e;
-  max-width: 70px;
+  max-width: 90px;
   padding: 6px 8px;
   margin: 1px;
 }
