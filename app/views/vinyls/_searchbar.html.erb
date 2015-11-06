@@ -4,8 +4,8 @@
       <%= form_tag vinyls_path, method: :get do %>
         <%= text_field_tag :search, nil, placeholder: 'Search vinyl', class:"field" %>
         <%= text_field_tag :address, nil, placeholder: 'Location', id:'user_input_autocomplete_address', class:"field"  %>
-        <%= text_field_tag :startdate, nil, placeholder: 'From', class:"date" %>
-        <%= text_field_tag :enddate, nil, placeholder: 'To', class:"date" %>
+        <%= text_field_tag :startdate, nil, placeholder: 'From', class:"search-date" %>
+        <%= text_field_tag :enddate, nil, placeholder: 'To', class:"search-date" %>
 
         <%= submit_tag "Find a vinyl", class:"btn-search" %>
       <% end %>
