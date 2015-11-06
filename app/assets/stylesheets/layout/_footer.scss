@@ -2,13 +2,13 @@ $bg: rgb(10, 10, 10);
 $border: 2px solid white;
 $vertical-padding: 40px;
 
-
 #footer {
   background-color: $bg;
   padding-top: $vertical-padding;
   padding-bottom: $vertical-padding;
   font-size: 15px;
   position: absolute;
+  bottom: 0;
   width: 100%;
 }
 
@@ -37,4 +37,3 @@ $vertical-padding: 40px;
 .copy {
   color: white;
 }
-// Your footer style
