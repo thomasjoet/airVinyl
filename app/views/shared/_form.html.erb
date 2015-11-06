@@ -1,13 +1,12 @@
 <%= simple_form_for([@vinyl, @booking], html:{ multipart: true }) do |f| %>
-  <div class="col-xs-12">
-    <%= f.input :startdate, as: :date, html5: true %>
-  </div>
-  <div class="col-xs-12">
-    <%= f.input :enddate, as: :date, html5: true %>
+  <div class="col-xs-6">
+    <%= f.input :startdate, as: :string, input_html: {class: "datepicker booking-date"}, placeholder: 'From', required: false %>  </div>
+  <div class="col-xs-6">
+    <%= f.input :enddate, as: :string, input_html: {class: "datepicker booking-date"}, placeholder: 'To', required: false %>
   </div>
 
   <div class="col-xs-12">
-    <%= f.button :submit, class: "btn-action" %>
+    <%= f.button :submit, class: "btn-booking" %>
   </div>
 <% end %>
 
