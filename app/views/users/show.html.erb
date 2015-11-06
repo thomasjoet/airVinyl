@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <div class="row">
+        <% current_user.vinyls.each do |vinyl| %>
+          <div class="col-xs-12 col-sm-4">
+            <%= render "vinyls/card", vinyl: vinyl %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -4,13 +4,16 @@
       <%= link_to vinyls_path do %>
         <%= image_tag "logo.png" %>
       <% end %>
+      <div>
+        <h3><em>Air Vinyl</em></h3>
+      </div>
 
     <div class="navbar-wagon-pusher"></div>
 
     <hr class="hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <div>
-        <%= link_to t(".sign_in", default: "My vinyls"),  user_vinyls_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to t(".sign_in", default: "My vinyls"),  user_path(current_user), class: "navbar-wagon-item navbar-wagon-link" %>
       </div>
       <hr>
       <div class="navbar-wagon-item">
