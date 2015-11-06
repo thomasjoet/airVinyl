@@ -32,21 +32,30 @@
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
-      <div class="bookingcard bookingcard-bg">
+      <div class="ownercard">
+        <div class="col-xs-4">
         <span>
-          <img src="<%= @vinyl.user.picture.url(:medium) %>" class="bookingcard-user avatar-large"/>
+          <img src="<%= @vinyl.user.picture.url(:medium) %>" class="ownercard-pic avatar-large"/>
         </span>
-        <div>
-          <div class="panel">
-            <div class="text-center">
-              <p><strong>Price: <%= @vinyl.price %>€ / day</strong></p>
-            </div>
-            <div>
-              <%= render 'shared/form' %>
-            </div>
-            <div>
-              <%= @booking.price %>
-            </div>
+        </div>
+        <div class="col-xs-8">
+          <div class="ownercard-text">
+            <h1><%= @vinyl.user.name %></h1>
+            <p><%= @vinyl.address %></p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="bookingcard">
+          <div class="bookingcard-price-bg">
+            <p class="bookingcard-price-number"><strong> <%= @vinyl.price %>€ </strong></p>
+            <p class="bookingcard-price-perday">per day</p>
+          </div>
+          <div class="bookingcard-form">
+            <%= render 'shared/form' %>
+          </div>
+          <div>
+            <%= @booking.price %>
           </div>
         </div>
       </div>

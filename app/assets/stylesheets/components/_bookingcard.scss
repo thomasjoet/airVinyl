@@ -1,32 +1,55 @@
 .bookingcard {
   position: relative;
-  height: 500px;
-  color: #464646;
-  margin: 10px auto;
-  padding: 10px;
+  height: 180px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  color: white;
+  margin: 20px;
+  border: 1px;
+  background-color: $gray-dark;
 }
 
-.bookingcard-bg {
-  background-size: cover;
-  background-color: #D8D8D8;
-  border-radius: 3px;
+.bookingcard-price-bg {
+  background-color: #383838;
+}
+
+.bookingcard-price-number {
+  font-size: 20px;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+  top: 10px;
+  left: 10px;
 }
 
-.panel {
+.bookingcard-price-perday {
+  font-size: 18px;
   position: absolute;
-  top: 100px;
-  height: 300px;
-  margin: 10px;
-  // border: 1px solid $gray-lighter;
-  border-radius: 3px;
-  padding: 20px;
+  top: 10px;
+  right: 10px;
 }
 
-.bookingcard-user {
+.bookingcard-form {
+  font-size: 18px;
   position: absolute;
+  bottom: 10px;
 }
 
+.booking-date {
+  border: 2px;
+  border-radius: 1px;
+  font-size: 12px;
+  background: #ffffff;
+  color: #42454e;
+  padding: 6px 8px;
+  margin: 1px;
+}
+
+// .bookingcard input {
+//     display: inline-block;
+//     width:100px;
+// }
+
+.bookingcard label {
+    font-size: 12px;
+    color: #FFFFFF;
+    text-shadow: 0 0px 0px;
+
+}

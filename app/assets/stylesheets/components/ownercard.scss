@@ -1,0 +1,25 @@
+.ownercard {
+  position: relative;
+  height: 110px;
+  color: #464646;
+  margin: 20px;
+}
+
+.ownercard-pic {
+  position: absolute;
+  margin: 10px;
+  top: 0px;
+}
+
+.ownercard-text {
+  position: absolute;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.ownercard-text h1 {
+  font-size: 20px;
+}
+.ownercard-text p {
+  font-size: 12px;
+}

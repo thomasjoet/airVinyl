@@ -8,7 +8,9 @@
 //= require_tree .
 //= require cocoon
 
-// app/assets/javascripts/application.js
+ $(document).ready(function(){
+    $('.datepicker').datepicker({ format: "dd/mm/yyyy" });
+  });
 
 function initializeAutocomplete(id) {
   var element = document.getElementById(id);
