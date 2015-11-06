@@ -27,6 +27,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def put_picture(size)
+    if self.picture.present?
+      self.picture(size)
+    else
+      "avatar.png"
+    end
+  end
+
   def self.process_uri(uri)
     avatar_url = URI.parse(uri)
     avatar_url.scheme = 'https'
