@@ -6,7 +6,7 @@
         <%= image_tag @booking.vinyl.picture.url(:medium), class: "image-medium" %>
       </div>
       <p><strong>Period: </strong><%= (@booking.enddate.to_date - @booking.startdate.to_date).to_i %> days, from <%= @booking.startdate.to_date %> to <%= @booking.enddate.to_date %>.</p>
-      <p><strong>Total price: </strong><%= (@booking.enddate.to_date - @booking.startdate.to_date).to_i * @booking.vinyl.price %></p>
+      <p><strong>Total price: </strong><%= (@booking.enddate.to_date - @booking.startdate.to_date).to_i * @booking.vinyl.price %> €</p>
     </div>
   </div>
 </div>
