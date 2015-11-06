@@ -7,7 +7,7 @@
 
   </span>
   <span class="card-user">
-    <img src="<%= vinyl.user.picture.url(:medium) %>" class="avatar avatar-bordered"/>
+    <%= image_tag vinyl.user.put_picture(:medium), class: "avatar avatar-bordered" %>
   </span>
   <span class="card-price">
    <p><%= vinyl.price %> €/day</p>

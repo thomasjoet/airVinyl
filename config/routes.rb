@@ -6,10 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create, :show]
   end
 
-
-  resources :users, only: [ :show, :edit, :update ] do
-    resources :vinyls, only: [ :index ]
-  end
+  resources :users, only: [ :show, :edit, :update ]
   # resources :dashboards, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.

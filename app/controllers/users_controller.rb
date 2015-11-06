@@ -13,9 +13,8 @@ class UsersController < ApplicationController
     end
   end
 
-  # def show
-  #   # redirect_to new_user_session_path
-  # end
+  def show
+  end
 
   private
 
