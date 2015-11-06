@@ -32,19 +32,21 @@
       </div>
     </div>
     <div class="col-xs-12 col-md-4">
-      <span>
-        <img src="<%= @vinyl.user.picture.url(:medium) %>" class="avatar-large"/>
-      </span>
-      <div>
-        <div class="panel">
-          <div class="text-center">
-            <p><strong>Price: <%= @vinyl.price %>€ / day</strong></p>
-          </div>
-          <div>
-            <%= render 'shared/form' %>
-          </div>
-          <div>
-            <%= @booking.price %>
+      <div class="bookingcard bookingcard-bg">
+        <span>
+          <img src="<%= @vinyl.user.picture.url(:medium) %>" class="bookingcard-user avatar-large"/>
+        </span>
+        <div>
+          <div class="panel">
+            <div class="text-center">
+              <p><strong>Price: <%= @vinyl.price %>€ / day</strong></p>
+            </div>
+            <div>
+              <%= render 'shared/form' %>
+            </div>
+            <div>
+              <%= @booking.price %>
+            </div>
           </div>
         </div>
       </div>
