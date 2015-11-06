@@ -5,7 +5,7 @@
 
     <%= simple_form_for(@user) do |f| %>
       <%= f.input :name %>
-      <%= image_tag current_user.picture.url(:thumb) %>
+      <%= image_tag current_user.put_picture(:thumb) %>
       <%= f.input :picture %>
 
       <%= f.button :submit, "Update", class: "btn-action" %>
